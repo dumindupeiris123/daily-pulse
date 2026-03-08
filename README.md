@@ -1,11 +1,11 @@
 # The Daily Pulse
 
-A PHP + Bootstrap news website with a full admin panel, built on MariaDB.
+A PHP + Bootstrap news website with a full admin panel.
 
 ## Requirements
 
 - PHP 8.1+
-- MariaDB / MySQL 8+
+- MySQL 8+
 
 ## Database Setup
 
@@ -14,7 +14,7 @@ Two SQL files are provided in the `sql/` folder:
 - **`migration.sql`** — Creates the `news_db` database and all tables. Run this first.
 - **`seed.sql`** — Populates the database with sample categories, articles, users, comments and tags. Run this after the migration.
 
-Import both files into your MySQL/MariaDB server in order. You can do this through phpMyAdmin, MySQL Workbench, TablePlus, or any other database client.
+Import both files into your MySQL server in order. You can do this through phpMyAdmin, MySQL Workbench, TablePlus, or any other database client.
 
 ### Default credentials (created by seed)
 
