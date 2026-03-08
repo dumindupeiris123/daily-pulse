@@ -1,0 +1,20 @@
+# MySQL runtime data (regenerated on db:start)
+.mysql/data/
+.mysql/mysql.sock
+.mysql/mysql.pid
+.mysql/*.log
+.mysql/tc.log
+
+# PHP error logs
+*.log
+/tmp/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
