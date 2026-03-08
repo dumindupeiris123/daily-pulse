@@ -52,9 +52,9 @@ require __DIR__ . '/includes/header.php';
 
         <nav aria-label="breadcrumb" class="mb-3">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?= SITE_URL ?>/src/index.php" class="text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?= SITE_URL ?>/index.php" class="text-decoration-none">Home</a></li>
                 <li class="breadcrumb-item">
-                    <a href="<?= SITE_URL ?>/src/category.php?slug=<?= h($article['category_slug']) ?>" class="text-decoration-none">
+                    <a href="<?= SITE_URL ?>/category.php?slug=<?= h($article['category_slug']) ?>" class="text-decoration-none">
                         <?= h($article['category_name']) ?>
                     </a>
                 </li>
@@ -62,7 +62,7 @@ require __DIR__ . '/includes/header.php';
             </ol>
         </nav>
 
-        <a href="<?= SITE_URL ?>/src/category.php?slug=<?= h($article['category_slug']) ?>" class="category-badge d-inline-block mb-3"
+        <a href="<?= SITE_URL ?>/category.php?slug=<?= h($article['category_slug']) ?>" class="category-badge d-inline-block mb-3"
            style="background:var(--accent);color:#fff;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;font-weight:700;padding:.25rem .7rem;text-decoration:none;">
             <?= h($article['category_name']) ?>
         </a>
@@ -167,7 +167,7 @@ require __DIR__ . '/includes/header.php';
                 <img src="<?= h($r['image_url'] ?: 'https://picsum.photos/seed/' . $r['id'] . '/200/150') ?>"
                      style="width:80px;height:60px;object-fit:cover;flex-shrink:0;" class="me-3 rounded" alt="">
                 <div>
-                    <a href="<?= SITE_URL ?>/src/article.php?slug=<?= h($r['slug']) ?>" class="text-decoration-none text-dark" style="font-family:var(--serif);font-size:.9rem;font-weight:700;line-height:1.3;">
+                    <a href="<?= SITE_URL ?>/article.php?slug=<?= h($r['slug']) ?>" class="text-decoration-none text-dark" style="font-family:var(--serif);font-size:.9rem;font-weight:700;line-height:1.3;">
                         <?= h($r['title']) ?>
                     </a>
                 </div>
@@ -182,7 +182,7 @@ require __DIR__ . '/includes/header.php';
             <div class="trending-item d-flex align-items-start">
                 <span class="num"><?= str_pad($i + 1, 2, '0', STR_PAD_LEFT) ?></span>
                 <div>
-                    <a href="<?= SITE_URL ?>/src/article.php?slug=<?= h($t['slug']) ?>"><?= h($t['title']) ?></a>
+                    <a href="<?= SITE_URL ?>/article.php?slug=<?= h($t['slug']) ?>"><?= h($t['title']) ?></a>
                     <div style="font-size:.72rem;color:var(--ink-soft);margin-top:.2rem;"><?= h($t['category_name']) ?></div>
                 </div>
             </div>

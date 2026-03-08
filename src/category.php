@@ -51,13 +51,13 @@ require __DIR__ . '/includes/header.php';
             <?php foreach ($articles as $article): ?>
             <div class="col-md-6">
                 <div class="article-card card h-100">
-                    <a href="<?= SITE_URL ?>/src/article.php?slug=<?= h($article['slug']) ?>">
+                    <a href="<?= SITE_URL ?>/article.php?slug=<?= h($article['slug']) ?>">
                         <img src="<?= h($article['image_url'] ?: 'https://picsum.photos/seed/' . $article['id'] . '/600/300') ?>"
                              class="card-img-top" alt="<?= h($article['title']) ?>">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">
-                            <a href="<?= SITE_URL ?>/src/article.php?slug=<?= h($article['slug']) ?>" class="text-decoration-none text-dark">
+                            <a href="<?= SITE_URL ?>/article.php?slug=<?= h($article['slug']) ?>" class="text-decoration-none text-dark">
                                 <?= h($article['title']) ?>
                             </a>
                         </h5>
@@ -99,7 +99,7 @@ require __DIR__ . '/includes/header.php';
             <div class="trending-item d-flex align-items-start">
                 <span class="num"><?= str_pad($i + 1, 2, '0', STR_PAD_LEFT) ?></span>
                 <div>
-                    <a href="<?= SITE_URL ?>/src/article.php?slug=<?= h($t['slug']) ?>"><?= h($t['title']) ?></a>
+                    <a href="<?= SITE_URL ?>/article.php?slug=<?= h($t['slug']) ?>"><?= h($t['title']) ?></a>
                     <div style="font-size:.72rem;color:var(--ink-soft);margin-top:.2rem;"><?= h($t['category_name']) ?></div>
                 </div>
             </div>
@@ -111,7 +111,7 @@ require __DIR__ . '/includes/header.php';
             <ul class="list-unstyled">
                 <?php foreach ($categories as $cat): ?>
                 <li class="d-flex justify-content-between py-2 border-bottom">
-                    <a href="<?= SITE_URL ?>/src/category.php?slug=<?= h($cat['slug']) ?>" class="text-decoration-none text-dark <?= $cat['id'] === $category['id'] ? 'fw-bold' : '' ?>">
+                    <a href="<?= SITE_URL ?>/category.php?slug=<?= h($cat['slug']) ?>" class="text-decoration-none text-dark <?= $cat['id'] === $category['id'] ? 'fw-bold' : '' ?>">
                         <?= h($cat['name']) ?>
                     </a>
                     <span class="badge rounded-pill" style="background:var(--ink);font-size:.7rem;"><?= $cat['article_count'] ?></span>

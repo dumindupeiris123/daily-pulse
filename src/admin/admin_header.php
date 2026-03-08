@@ -95,19 +95,19 @@
 <body>
 
 <aside class="admin-sidebar">
-    <a href="<?= SITE_URL ?>/src/admin/dashboard.php" class="brand">Daily<span>Pulse</span> <small style="font-size:.65rem;opacity:.5;font-weight:400;">Admin</small></a>
+    <a href="<?= SITE_URL ?>/admin/dashboard.php" class="brand">Daily<span>Pulse</span> <small style="font-size:.65rem;opacity:.5;font-weight:400;">Admin</small></a>
     <nav class="admin-nav flex-grow-1 pt-2">
         <div class="nav-section">Content</div>
-        <a href="<?= SITE_URL ?>/src/admin/dashboard.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) === 'dashboard.php' ? 'active' : '' ?>">
+        <a href="<?= SITE_URL ?>/admin/dashboard.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) === 'dashboard.php' ? 'active' : '' ?>">
             <i class="bi bi-grid-1x2"></i> Dashboard
         </a>
-        <a href="<?= SITE_URL ?>/src/admin/articles.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) === 'articles.php' || basename($_SERVER['PHP_SELF']) === 'article_edit.php' ? 'active' : '' ?>">
+        <a href="<?= SITE_URL ?>/admin/articles.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) === 'articles.php' || basename($_SERVER['PHP_SELF']) === 'article_edit.php' ? 'active' : '' ?>">
             <i class="bi bi-newspaper"></i> Articles
         </a>
-        <a href="<?= SITE_URL ?>/src/admin/categories.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) === 'categories.php' ? 'active' : '' ?>">
+        <a href="<?= SITE_URL ?>/admin/categories.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) === 'categories.php' ? 'active' : '' ?>">
             <i class="bi bi-tag"></i> Categories
         </a>
-        <a href="<?= SITE_URL ?>/src/admin/comments.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) === 'comments.php' ? 'active' : '' ?>">
+        <a href="<?= SITE_URL ?>/admin/comments.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) === 'comments.php' ? 'active' : '' ?>">
             <i class="bi bi-chat-dots"></i> Comments
             <?php
             $pending = (int)(get_db()->query('SELECT COUNT(*) FROM comments WHERE is_approved = 0')->fetchColumn());
@@ -117,15 +117,15 @@
         </a>
         <?php if (is_admin()): ?>
         <div class="nav-section">Management</div>
-        <a href="<?= SITE_URL ?>/src/admin/users.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) === 'users.php' ? 'active' : '' ?>">
+        <a href="<?= SITE_URL ?>/admin/users.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) === 'users.php' ? 'active' : '' ?>">
             <i class="bi bi-people"></i> Users
         </a>
         <?php endif; ?>
         <div class="nav-section">Site</div>
-        <a href="<?= SITE_URL ?>/src/index.php" class="nav-link" target="_blank">
+        <a href="<?= SITE_URL ?>/index.php" class="nav-link" target="_blank">
             <i class="bi bi-box-arrow-up-right"></i> View Site
         </a>
-        <a href="<?= SITE_URL ?>/src/admin/logout.php" class="nav-link">
+        <a href="<?= SITE_URL ?>/admin/logout.php" class="nav-link">
             <i class="bi bi-box-arrow-right"></i> Logout
         </a>
     </nav>
@@ -140,7 +140,7 @@
 <div class="admin-main">
 <div class="admin-topbar">
     <div style="font-weight:600;font-size:.95rem;"><?= h($page_title ?? 'Dashboard') ?></div>
-    <a href="<?= SITE_URL ?>/src/admin/article_edit.php" class="btn btn-sm" style="background:var(--accent);color:#fff;font-size:.8rem;">
+    <a href="<?= SITE_URL ?>/admin/article_edit.php" class="btn btn-sm" style="background:var(--accent);color:#fff;font-size:.8rem;">
         <i class="bi bi-plus-lg me-1"></i>New Article
     </a>
 </div>

@@ -94,11 +94,11 @@
         <span><i class="bi bi-calendar3 me-1"></i><?= date('l, F j, Y') ?></span>
         <div>
             <?php if (is_logged_in()): ?>
-                <a href="<?= SITE_URL ?>/src/admin/dashboard.php"><i class="bi bi-shield-lock me-1"></i>Admin</a>
+                <a href="<?= SITE_URL ?>/admin/dashboard.php"><i class="bi bi-shield-lock me-1"></i>Admin</a>
                 <span class="mx-2">|</span>
-                <a href="<?= SITE_URL ?>/src/admin/logout.php">Logout</a>
+                <a href="<?= SITE_URL ?>/admin/logout.php">Logout</a>
             <?php else: ?>
-                <a href="<?= SITE_URL ?>/src/admin/login.php"><i class="bi bi-person me-1"></i>Admin Login</a>
+                <a href="<?= SITE_URL ?>/admin/login.php"><i class="bi bi-person me-1"></i>Admin Login</a>
             <?php endif; ?>
         </div>
     </div>
@@ -106,7 +106,7 @@
 
 <header class="masthead">
     <div class="container d-flex justify-content-between align-items-center">
-        <a href="<?= SITE_URL ?>/src/index.php" class="brand">The Daily<span>Pulse</span></a>
+        <a href="<?= SITE_URL ?>/index.php" class="brand">The Daily<span>Pulse</span></a>
         <div class="d-none d-md-block text-end">
             <div style="font-size:.75rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.1em;">Breaking news &bull; In-depth analysis</div>
         </div>
@@ -120,15 +120,15 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="<?= SITE_URL ?>/src/index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?= SITE_URL ?>/index.php">Home</a></li>
                 <?php foreach (get_all_categories() as $cat): ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= SITE_URL ?>/src/category.php?slug=<?= h($cat['slug']) ?>">
+                    <a class="nav-link" href="<?= SITE_URL ?>/category.php?slug=<?= h($cat['slug']) ?>">
                         <?= h($cat['name']) ?>
                     </a>
                 </li>
                 <?php endforeach; ?>
-                <li class="nav-item"><a class="nav-link" href="<?= SITE_URL ?>/src/about.php">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?= SITE_URL ?>/about.php">About</a></li>
             </ul>
         </div>
     </div>

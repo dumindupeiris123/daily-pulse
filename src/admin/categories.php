@@ -82,7 +82,7 @@ require __DIR__ . '/admin_header.php';
                             <?= $editing ? 'Update' : 'Create' ?>
                         </button>
                         <?php if ($editing): ?>
-                        <a href="<?= SITE_URL ?>/src/admin/categories.php" class="btn btn-sm btn-outline-secondary">Cancel</a>
+                        <a href="<?= SITE_URL ?>/admin/categories.php" class="btn btn-sm btn-outline-secondary">Cancel</a>
                         <?php endif; ?>
                     </div>
                 </form>

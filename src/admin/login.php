@@ -77,7 +77,7 @@ if (is_logged_in()) {
     </form>
 
     <div class="text-center mt-4">
-        <a href="<?= SITE_URL ?>/src/index.php" style="font-size:.8rem;color:#6c757d;">← Back to site</a>
+        <a href="<?= SITE_URL ?>/index.php" style="font-size:.8rem;color:#6c757d;">← Back to site</a>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

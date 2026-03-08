@@ -46,10 +46,10 @@ require __DIR__ . '/admin_header.php';
                 </select>
                 <button type="submit" class="btn btn-sm btn-outline-secondary">Filter</button>
                 <?php if ($search || $status): ?>
-                <a href="<?= SITE_URL ?>/src/admin/articles.php" class="btn btn-sm btn-outline-danger">Clear</a>
+                <a href="<?= SITE_URL ?>/admin/articles.php" class="btn btn-sm btn-outline-danger">Clear</a>
                 <?php endif; ?>
             </form>
-            <a href="<?= SITE_URL ?>/src/admin/article_edit.php" class="btn btn-sm" style="background:var(--accent);color:#fff;">
+            <a href="<?= SITE_URL ?>/admin/article_edit.php" class="btn btn-sm" style="background:var(--accent);color:#fff;">
                 <i class="bi bi-plus-lg me-1"></i>New Article
             </a>
         </div>
@@ -84,12 +84,12 @@ require __DIR__ . '/admin_header.php';
                     <td>
                         <div class="d-flex gap-1">
                             <?php if ($a['status'] === 'published'): ?>
-                            <a href="<?= SITE_URL ?>/src/article.php?slug=<?= h($a['slug']) ?>" target="_blank"
+                            <a href="<?= SITE_URL ?>/article.php?slug=<?= h($a['slug']) ?>" target="_blank"
                                class="btn btn-sm btn-outline-success py-0 px-2" style="font-size:.72rem;" title="View">
                                 <i class="bi bi-eye"></i>
                             </a>
                             <?php endif; ?>
-                            <a href="<?= SITE_URL ?>/src/admin/article_edit.php?id=<?= $a['id'] ?>"
+                            <a href="<?= SITE_URL ?>/admin/article_edit.php?id=<?= $a['id'] ?>"
                                class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size:.72rem;" title="Edit">
                                 <i class="bi bi-pencil"></i>
                             </a>

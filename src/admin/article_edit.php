@@ -95,9 +95,9 @@ require __DIR__ . '/admin_header.php';
                         <button type="submit" class="btn px-4" style="background:var(--accent);color:#fff;">
                             <i class="bi bi-check-lg me-1"></i><?= $is_edit ? 'Update Article' : 'Create Article' ?>
                         </button>
-                        <a href="<?= SITE_URL ?>/src/admin/articles.php" class="btn btn-outline-secondary">Cancel</a>
+                        <a href="<?= SITE_URL ?>/admin/articles.php" class="btn btn-outline-secondary">Cancel</a>
                         <?php if ($is_edit && $article['status'] === 'published'): ?>
-                        <a href="<?= SITE_URL ?>/src/article.php?slug=<?= h($article['slug']) ?>" target="_blank" class="btn btn-outline-success ms-auto">
+                        <a href="<?= SITE_URL ?>/article.php?slug=<?= h($article['slug']) ?>" target="_blank" class="btn btn-outline-success ms-auto">
                             <i class="bi bi-box-arrow-up-right me-1"></i>View Live
                         </a>
                         <?php endif; ?>
@@ -149,7 +149,7 @@ require __DIR__ . '/admin_header.php';
         <div class="card border-0 shadow-sm border border-danger-subtle">
             <div class="card-body">
                 <h6 class="text-danger mb-2" style="font-size:.85rem;">Danger Zone</h6>
-                <form method="POST" action="<?= SITE_URL ?>/src/admin/articles.php" onsubmit="return confirm('Permanently delete this article?');">
+                <form method="POST" action="<?= SITE_URL ?>/admin/articles.php" onsubmit="return confirm('Permanently delete this article?');">
                     <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
                     <input type="hidden" name="delete_id" value="<?= $article['id'] ?>">
                     <button type="submit" class="btn btn-sm btn-outline-danger w-100">

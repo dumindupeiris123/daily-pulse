@@ -45,7 +45,7 @@ require __DIR__ . '/admin_header.php';
         <div class="card border-0 shadow-sm">
             <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
                 <strong style="font-size:.875rem;">Recent Articles</strong>
-                <a href="<?= SITE_URL ?>/src/admin/articles.php" style="font-size:.8rem;color:var(--accent);">View all →</a>
+                <a href="<?= SITE_URL ?>/admin/articles.php" style="font-size:.8rem;color:var(--accent);">View all →</a>
             </div>
             <div class="card-body p-0">
                 <table class="table admin-table mb-0">
@@ -74,7 +74,7 @@ require __DIR__ . '/admin_header.php';
                             <td style="font-size:.8rem;"><?= number_format($a['views']) ?></td>
                             <td style="font-size:.75rem;color:#6c757d;"><?= format_date($a['created_at']) ?></td>
                             <td>
-                                <a href="<?= SITE_URL ?>/src/admin/article_edit.php?id=<?= $a['id'] ?>" class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size:.75rem;">Edit</a>
+                                <a href="<?= SITE_URL ?>/admin/article_edit.php?id=<?= $a['id'] ?>" class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size:.75rem;">Edit</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

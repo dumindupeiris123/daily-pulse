@@ -54,7 +54,7 @@ require __DIR__ . '/admin_header.php';
                     </td>
                     <td style="font-size:.85rem;max-width:280px;"><?= h(substr($c['content'], 0, 100)) ?><?= strlen($c['content']) > 100 ? '…' : '' ?></td>
                     <td style="font-size:.8rem;">
-                        <a href="<?= SITE_URL ?>/src/article.php?slug=<?= h($c['article_slug']) ?>" target="_blank" class="text-decoration-none">
+                        <a href="<?= SITE_URL ?>/article.php?slug=<?= h($c['article_slug']) ?>" target="_blank" class="text-decoration-none">
                             <?= h(substr($c['article_title'], 0, 40)) ?>…
                         </a>
                     </td>

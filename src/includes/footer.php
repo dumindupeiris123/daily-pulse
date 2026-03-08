@@ -11,15 +11,15 @@
                 <h6 class="text-white text-uppercase mb-3" style="font-size:.8rem;letter-spacing:.1em;">Sections</h6>
                 <ul class="list-unstyled">
                     <?php foreach (get_all_categories() as $cat): ?>
-                    <li class="mb-1"><a href="<?= SITE_URL ?>/src/category.php?slug=<?= h($cat['slug']) ?>"><?= h($cat['name']) ?></a></li>
+                    <li class="mb-1"><a href="<?= SITE_URL ?>/category.php?slug=<?= h($cat['slug']) ?>"><?= h($cat['name']) ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
             <div class="col-md-3 mb-4">
                 <h6 class="text-white text-uppercase mb-3" style="font-size:.8rem;letter-spacing:.1em;">Company</h6>
                 <ul class="list-unstyled">
-                    <li class="mb-1"><a href="<?= SITE_URL ?>/src/about.php">About Us</a></li>
-                    <li class="mb-1"><a href="<?= SITE_URL ?>/src/about.php#contact">Contact</a></li>
+                    <li class="mb-1"><a href="<?= SITE_URL ?>/about.php">About Us</a></li>
+                    <li class="mb-1"><a href="<?= SITE_URL ?>/about.php#contact">Contact</a></li>
                     <li class="mb-1"><a href="#">Privacy Policy</a></li>
                     <li class="mb-1"><a href="#">Terms of Service</a></li>
                 </ul>

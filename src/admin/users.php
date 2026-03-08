@@ -129,7 +129,7 @@ require __DIR__ . '/admin_header.php';
                             <?= $editing ? 'Update User' : 'Create User' ?>
                         </button>
                         <?php if ($editing): ?>
-                        <a href="<?= SITE_URL ?>/src/admin/users.php" class="btn btn-sm btn-outline-secondary">Cancel</a>
+                        <a href="<?= SITE_URL ?>/admin/users.php" class="btn btn-sm btn-outline-secondary">Cancel</a>
                         <?php endif; ?>
                     </div>
                 </form>
